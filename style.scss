@@ -1,0 +1,227 @@
+/**
+ *TABLE OF CONTENTS
+ *
+ *FONTS..................declaration of fonts.
+ *GENERAL................general, sitewide styles.
+ *MIXINS.................useful mixins.
+ *HEAD...................styling for items in the header of the site.
+ *BODY...................styling for items below the header (including footer).
+ *LAYOUT.................styling for layout elements (such as three-box layout).
+ *
+ */
+
+/***********************
+ FONTS
+ **********************/
+
+//ROBOTO
+@import 'fonts/Roboto/Roboto.scss';
+
+//CRIMSONTEXT
+@import 'fonts/CrimsonText/CrimsonText.scss'; //font named 'Crimson'
+
+//CARDO
+@import 'fonts/Cardo/Cardo.scss';
+
+
+
+/***********************
+ GENERAL
+ **********************/
+
+body {
+    margin: 0;
+    background-color: #efefef;
+    font-family: 'Roboto';
+    font-weight: 400;
+    
+    //to make footer work:
+    position: relative;
+    padding-bottom: 200px;
+    min-height: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 300;
+    font-family: 'Roboto';
+}
+
+h1 { font-size: 48px; font-weight: 100; }
+h2 { font-size: 36px; }
+h3 { font-size: 24px; }
+
+a {
+    text-decoration: none;
+    color: #287aff;
+}
+
+hr {
+    border: 1px solid lightgray;
+    color: lightgray;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+p {
+    font-family: 'Cardo';
+    font-size: 18px;
+}
+
+
+
+
+
+/***********************
+ MIXINS
+ ***********************/
+
+div.box {
+    padding: 40px;
+}
+    
+.center {
+    text-align: center;
+}
+
+
+
+
+
+
+/***********************
+ HEAD
+ ***********************/
+
+.head {
+    width: 70%; //Difference is equal to padding * 2
+    height: 70px;
+    padding: 30px 15% 30px 15%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+}
+
+.site-logo {
+    width: 300px;
+    
+    a {
+        font-size: 48px;
+        text-decoration: none;
+        color: black;
+        font-weight: 300;
+    }
+}
+
+.site-nav {
+    padding: 15px;
+    flex: 1;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float:right;
+    overflow: hidden;
+    
+    li {
+        float: left;
+        margin: 10px;
+        padding: 4px;
+        
+        a {
+            display: block;
+            color: black;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        &:hover {
+            border-bottom: 1px solid black;
+        }
+    }
+}
+
+
+
+
+
+
+/***********************
+ BODY
+ **********************/
+
+div.banner {
+    img {
+        position: relative;
+        width: 100%;
+    }
+    
+    div {
+        position: absolute;
+        top: 200px;
+        left: calc(70% / 2);
+        width: 30%;
+        color: white;
+        text-align: center;
+        
+        p {
+            font-weight: 300;
+            font-family: 'Roboto';
+            font-size: 18px;
+        }
+    }
+}
+
+div.body {
+    padding: 20px 15% 0 15%;
+}
+
+div.foot {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lightgray;
+    padding: 30px 0 30px 0;
+    
+    div.content {
+        width: 70%;
+        margin: auto;
+        color: gray;
+    }
+}
+
+
+
+
+
+
+/***********************
+ LAYOUT
+ **********************/
+
+div.body-element { //any section of the body
+    padding: 20px 0 20px 0;
+}
+
+div.three-div-layout {
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:stretch;
+
+    .left, .middle, .right {
+        @extend .box;
+        //Each box idrs 100% / 3 - (padding * 2)
+        flex-basis: calc(100% / 3 - (80px)); //width of each box
+    } 
+    
+    .left { order:1; }
+    .middle { order:3; }
+    .right { order:2; }
+}

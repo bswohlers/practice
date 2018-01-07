@@ -1,0 +1,56 @@
+/**
+ *CRIMSONTEXT STYLESHEET
+ *ARRANGED IN ORDER OF FONT WEIGHT
+ */
+
+
+//400
+@font-face {
+    font-family: 'Crimson';
+    src: 
+        local('Crimson Text'),
+        url('fonts/C/CrimsonText-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Crimson';
+    src:
+        url('fonts/CrimsonText/CrimsonText-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+//500
+@font-face {
+    font-family: 'Crimson';
+    src:
+        url('fonts/CrimsonText/CrimsonText-SemiBold.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Crimson';
+    src:
+        url('fonts/CrimsonText/CrimsonText-SemiBoldItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+//700
+@font-face {
+    font-family: 'Crimson';
+    src:
+        url('fonts/CrimsonText/CrimsonText-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Crimson';
+    src:
+        url('fonts/CrimsonText/CrimsonText-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}

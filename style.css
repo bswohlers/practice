@@ -1,0 +1,289 @@
+/**
+ *TABLE OF CONTENTS
+ *
+ *VARIABLES..............variable declarations.
+ *FONTS..................declaration of fonts.
+ *GENERAL................general, sitewide styles.
+ *MIXINS.................useful mixins.
+ *HEAD...................styling for items in the header of the site.
+ *BODY...................styling for items below the header (including footer).
+ *LAYOUT.................styling for layout elements (such as three-box layout).
+ *
+ */
+/***********************
+ VARIABLES
+ **********************/
+/***********************
+ FONTS
+ **********************/
+/**
+ *ROBOTO STYLESHEET
+ *ARRANGED IN ORDER OF FONT WEIGHT
+ */
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-Thin.ttf");
+  font-weight: 100; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-Light.ttf");
+  font-weight: 300; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: local("Roboto"), url("fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-Italic.ttf");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-Medium.ttf");
+  font-weight: 500; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("fonts/Roboto/Roboto-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic; }
+/**
+ *CRIMSONTEXT STYLESHEET
+ *ARRANGED IN ORDER OF FONT WEIGHT
+ */
+@font-face {
+  font-family: 'Crimson';
+  src: local("Crimson Text"), url("fonts/C/CrimsonText-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Crimson';
+  src: url("fonts/CrimsonText/CrimsonText-Italic.ttf");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Crimson';
+  src: url("fonts/CrimsonText/CrimsonText-SemiBold.ttf");
+  font-weight: 500; }
+@font-face {
+  font-family: 'Crimson';
+  src: url("fonts/CrimsonText/CrimsonText-SemiBoldItalic.ttf");
+  font-weight: 500;
+  font-style: italic; }
+@font-face {
+  font-family: 'Crimson';
+  src: url("fonts/CrimsonText/CrimsonText-Bold.ttf");
+  font-weight: 700; }
+@font-face {
+  font-family: 'Crimson';
+  src: url("fonts/CrimsonText/CrimsonText-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic; }
+/**
+ *CARDO STYLESHEET
+ *ARRANGED IN ORDER OF FONT WEIGHT
+ */
+@font-face {
+  font-family: 'Cardo';
+  src: local("Cardo"), url("fonts/Cardo/Cardo-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Cardo';
+  src: url("fonts/Cardo/Cardo-Italic.ttf");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Cardo';
+  src: url("fonts/Cardo/Cardo-Bold.ttf");
+  font-weight: 700; }
+/***********************
+ GENERAL
+ **********************/
+body {
+  margin: 0;
+  background-color: #efefef;
+  font-family: 'Roboto';
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 200px;
+  min-height: 100%; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Roboto'; }
+
+h1 {
+  font-size: 48px;
+  font-weight: 100; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 24px; }
+
+a {
+  text-decoration: none;
+  color: #287aff; }
+
+hr {
+  border: 1px solid lightgray;
+  color: lightgray;
+  margin-left: 5%;
+  margin-right: 5%; }
+
+p {
+  font-family: 'Cardo';
+  font-size: 18px; }
+
+input {
+  font-family: 'Roboto';
+  font-weight: 300;
+  background-color: inherit; }
+  input[type='text'], input[type='password'] {
+    border: none;
+    border-bottom: 2px solid #5999ff;
+    transition: .5s; }
+    input[type='text']:focus, input[type='password']:focus {
+      border-bottom: 2px solid #1e74ff; }
+  input.small {
+    font-size: 14px;
+    padding: 6px; }
+  input.medium {
+    font-size: 16px;
+    padding: 8px; }
+  input.large {
+    font-size: 20px;
+    padding: 10px; }
+  input.long {
+    width: 60%; }
+  input.max-width {
+    width: 100%; }
+  input:focus {
+    outline: none; }
+
+/***********************
+ MIXINS
+ ***********************/
+div.box, div.three-div-layout div.left, div.three-div-layout div.middle, div.three-div-layout div.right {
+  padding: 40px; }
+
+.center {
+  text-align: center; }
+
+/***********************
+ HEAD
+ ***********************/
+.head {
+  width: 70%;
+  height: 70px;
+  padding: 30px 15% 30px 15%;
+  border-bottom: 1px solid lightgray;
+  display: flex; }
+
+.site-logo {
+  width: 300px; }
+  .site-logo a {
+    font-size: 48px;
+    text-decoration: none;
+    color: black;
+    font-weight: 300; }
+
+.site-nav {
+  padding: 15px;
+  flex: 1; }
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  overflow: hidden; }
+  ul.nav li {
+    float: left;
+    margin: 10px;
+    padding: 4px; }
+    ul.nav li a {
+      display: block;
+      color: black;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center; }
+    ul.nav li:hover {
+      border-bottom: 1px solid black; }
+
+/***********************
+ BODY
+ **********************/
+div.banner img {
+  position: relative;
+  width: 100%; }
+div.banner div {
+  position: absolute;
+  top: 200px;
+  left: calc(70% / 2);
+  width: 30%;
+  color: white;
+  text-align: center; }
+  div.banner div p {
+    font-weight: 300;
+    font-family: 'Roboto';
+    font-size: 18px; }
+
+div.body {
+  padding: 30px 15% 0 15%; }
+
+div.foot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: lightgray;
+  padding: 30px 0 30px 0; }
+  div.foot div.content {
+    width: 70%;
+    margin: auto;
+    color: gray; }
+
+/***********************
+ LAYOUT
+ **********************/
+div.body-element {
+  padding: 30px 0 30px 0; }
+
+div.three-div-layout {
+  padding: 30px 0 30px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch; }
+  div.three-div-layout .left, div.three-div-layout .middle, div.three-div-layout .right {
+    flex-basis: calc(100% / 3 - (80px)); }
+  div.three-div-layout .left {
+    order: 1; }
+  div.three-div-layout .middle {
+    order: 3; }
+  div.three-div-layout .right {
+    order: 2; }
+
+/*# sourceMappingURL=style.css.map */

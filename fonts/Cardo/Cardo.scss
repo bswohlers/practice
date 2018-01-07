@@ -1,0 +1,31 @@
+/**
+ *CARDO STYLESHEET
+ *ARRANGED IN ORDER OF FONT WEIGHT
+ */
+
+
+//400
+@font-face {
+    font-family: 'Cardo';
+    src: 
+        local('Cardo'),
+        url('fonts/Cardo/Cardo-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src:
+        url('fonts/Cardo/Cardo-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+//700
+@font-face {
+    font-family: 'Cardo';
+    src:
+        url('fonts/Cardo/Cardo-Bold.ttf');
+    font-weight: 700;
+}
