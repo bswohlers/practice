@@ -1,3 +1,9 @@
+<?php
+
+require 'core.php';
+
+?>
+
 <html>
     <head>
         <title>Test Site</title>
